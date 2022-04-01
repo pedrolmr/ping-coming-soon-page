@@ -132,22 +132,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-/*
-### Primary
-
-- Blue: hsl(223, 87%, 63%)
-
-### Secondary
-
-- Pale Blue: hsl(223, 100%, 88%)
-- Light Red: hsl(354, 100%, 66%)
-
-### Neutral
-
-- Gray: hsl(0, 0%, 59%)
-- Very Dark Blue: hsl(209, 33%, 12%)
-*/
 :root {
   --blue: hsl(223, 87%, 63%);
   --paleBlue: hsl(223, 100%, 88%);
@@ -155,19 +139,17 @@ table {
   --gray: hsl(0, 0%, 59%);
   --veryDarkBlue: hsl(209, 33%, 12%);
 }
+/*Container*/
 .container {
   margin: 0 auto;
-  /* height: 100vh; */
-  /* border: 3px solid yellowgreen; */
   max-width: 630px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
+/*HEADER*/
 .container header {
-  /* border: 2px solid purple; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +178,6 @@ table {
   margin-bottom: 30px;
 }
 .container header .input-container {
-  /* border: 2px solid rgb(255, 100, 255); */
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -225,17 +206,8 @@ table {
   font-size: 1em;
 }
 
-/* .container .image {
-  background-image: url("./images/illustration-dashboard.png");
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  margin-top: 70px;
-  margin-bottom: 100px;
-} */
 .container .image {
   box-sizing: border-box;
-  /* border: 1px solid red; */
   margin-top: 70px;
   margin-bottom: 100px;
 }
@@ -246,7 +218,6 @@ table {
 }
 
 .container footer {
-  /* border: 2px solid green; */
   text-align: center;
 }
 .container footer p {
@@ -272,27 +243,32 @@ table {
 }
 .container footer .icons div > i {
   color: rgb(64, 129, 234);
-  /* border: 1px solid rgb(216, 216, 216); */
-  /* padding: 0.4em; */
-  /* border-radius: 50%; */
   text-align: center;
-  /* margin: 0 10px; */
 }
-/* .container footer .icons i:first-child {
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-}
-.container footer .icons i:last-child {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-} */
 
 @media (min-width: 375px) and (max-width: 667px) {
-  /* background-color: purple; */
+  .container {
+    padding: 2em;
+    box-sizing: border-box;
+  }
   .container header h1 {
     font-size: 1.8em;
   }
   .container header h2 {
     font-size: 1.8em;
+  }
+  .container header .input-container {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .container header .input-container input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  .container header .input-container button {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
